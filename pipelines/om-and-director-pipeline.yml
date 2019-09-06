@@ -101,8 +101,8 @@ jobs:
     params: &director_credhub_interpolate_params
       CREDHUB_SERVER: ((credhub_server))
       CREDHUB_CA_CERT: ((credhub_ca_cert.certificate))
-      CREDHUB_CLIENT: concourse_to_credhub
-      CREDHUB_SECRET: ((concourse_to_credhub_secret))
+      CREDHUB_CLIENT: credhub_admin_client
+      CREDHUB_SECRET: ((credhub_admin_client_secret))
       PREFIX: '/((foundation))-foundation'
       INTERPOLATION_PATHS: "environments/((iaas))/((foundation))/config-common/secrets environments/((iaas))/((foundation))/config-director/secrets"
     input_mapping:
