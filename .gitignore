@@ -1,1 +1,6 @@
 pipeline-vars.yml
+notes.md
+platform-automation-example-write_id_rsa
+platform-automation-example-write_id_rsa.pub
+platform_automation_example_locks_git_repo_id_rsa
+platform_automation_example_locks_git_repo_id_rsa.pub
