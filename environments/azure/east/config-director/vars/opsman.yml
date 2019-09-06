@@ -1,0 +1,12 @@
+opsman_vm_name: pivotal-ops-manager
+opsman_private_ip: 10.0.8.4
+opsman_public_ip: 40.117.126.6
+opsman_host: opsmgr.east.s1p.koundinya.cc
+azure_subscription_id:
+azure_resource_group:
+azure_tenant_id:
+azure_client_id:
+azure_region:
+vpc_subnet: /subscriptions/07feece3-65c6-4c2a-bae0-5ca575a8129a/resourceGroups/pivotal-platform-east/providers/Microsoft.Network/virtualNetworks/pivotal-platform-east-virtual-network/subnets/pivotal-platform-east-infrastructure-subnet
+storage_account: 1gbju1hudw24mw0scjpd                      # used for the Ops Manager image; obtain from terraform output/state or Azure Portal
+ops_manager_ssh_public_key: ssh-rsa AAAAB3NzaC1yc2EAAAA

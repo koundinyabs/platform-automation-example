@@ -1,6 +1,6 @@
 groups:
 - name: deployment-pipeline
-  jobs: 
+  jobs:
     - lock-director
     - validate-director-configuration
     - install-opsman
@@ -8,9 +8,9 @@ groups:
     - upgrade-opsman
     - unlock-director
 - name: ad-hoc-jobs
-  jobs: 
+  jobs:
     - force-unlock
-    
+
 resource_types:
 - name: pivnet
   type: docker-image
@@ -38,14 +38,14 @@ resources:
   type: git
   source:
     branch: master
-    uri: git@github.com:doddatpivotal/platform-automation-example.git
+    uri: git@github.com:koundinyabs/platform-automation-example.git
     private_key: ((platform_automation_example_git_repo.private_key))
 
 - name: director-configuration
   type: git
   source:
     branch: master
-    uri: git@github.com:doddatpivotal/platform-automation-example.git
+    uri: git@github.com:koundinyabs/platform-automation-example.git
     paths:
     - "environments/((iaas))/((foundation))/config-director"
     - "proposed-tasks"
@@ -55,7 +55,7 @@ resources:
   type: pool
   source:
     branch: master
-    uri: git@github.com:doddatpivotal/platform-automation-example-locks.git
+    uri: git@github.com:koundinyabs/platform-automation-example-locks.git
     private_key: ((platform_automation_example_locks_git_repo.private_key))
     pool: ((foundation))
     retry_delay: 1m
@@ -77,7 +77,7 @@ jobs:
     - put: lock
       params: {acquire: true}
     - get: director-configuration
-      
+
 - name: validate-director-configuration
   plan:
   - aggregate:
@@ -88,7 +88,7 @@ jobs:
       resource: platform-automation
       params:
         unpack: true
-        globs: ["*image*"]    
+        globs: ["*image*"]
     - get: platform-automation-tasks
       resource: platform-automation
       params:
@@ -133,7 +133,7 @@ jobs:
       files: director-configuration
     output_mapping:
       interpolated-files: interpolated-files
-  
+
   - task: download-create-opsman
     image: platform-automation-image
     file: director-configuration/proposed-tasks/download-create-opsman.yml
@@ -174,7 +174,7 @@ jobs:
           params:
             repository: state-commit
             merge: true
-  
+
   - task: configure-authentication
     image: platform-automation-image
     file: platform-automation-tasks/tasks/configure-authentication.yml
@@ -231,7 +231,7 @@ jobs:
     file: platform-automation-tasks/tasks/credhub-interpolate.yml
     params: *director_credhub_interpolate_params
     input_mapping:
-      files: director-configuration      
+      files: director-configuration
   - task: export-installation
     image: platform-automation-image
     file: platform-automation-tasks/tasks/export-installation.yml
@@ -254,7 +254,7 @@ jobs:
       resource: platform-automation
       params:
         unpack: true
-        globs: ["*image*"]    
+        globs: ["*image*"]
     - get: platform-automation-tasks
       resource: platform-automation
       params:
