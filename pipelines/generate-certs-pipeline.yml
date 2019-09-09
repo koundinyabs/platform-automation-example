@@ -57,7 +57,7 @@ jobs:
     file: configuration/proposed-tasks/generate-cert.yml
     params:
       ENV_FILE: interpolated-files/environments/((iaas))/((foundation))/config-common/secrets/env.yml
-      CREDHUB_CLIENT: concourse_to_credhub
+      CREDHUB_CLIENT: credhub_admin_client
       CREDHUB_SECRET: ((concourse_to_credhub_secret))
       CREDHUB_SERVER: ((credhub_server))
       CREDHUB_CA_CERT: ((credhub_ca_cert.certificate))
@@ -71,7 +71,7 @@ jobs:
     file: configuration/proposed-tasks/generate-cert.yml
     params:
       ENV_FILE: interpolated-files/environments/((iaas))/((foundation))/config-common/secrets/env.yml
-      CREDHUB_CLIENT: concourse_to_credhub
+      CREDHUB_CLIENT: credhub_admin_client
       CREDHUB_SECRET: ((concourse_to_credhub_secret))
       CREDHUB_SERVER: ((credhub_server))
       CREDHUB_CA_CERT: ((credhub_ca_cert.certificate))
@@ -85,7 +85,7 @@ jobs:
     file: configuration/proposed-tasks/generate-cert.yml
     params:
       ENV_FILE: interpolated-files/environments/((iaas))/((foundation))/config-common/secrets/env.yml
-      CREDHUB_CLIENT: concourse_to_credhub
+      CREDHUB_CLIENT: credhub_admin_client
       CREDHUB_SECRET: ((concourse_to_credhub_secret))
       CREDHUB_SERVER: ((credhub_server))
       CREDHUB_CA_CERT: ((credhub_ca_cert.certificate))
@@ -99,7 +99,7 @@ jobs:
     file: configuration/proposed-tasks/generate-cert.yml
     params:
       ENV_FILE: interpolated-files/environments/((iaas))/((foundation))/config-common/secrets/env.yml
-      CREDHUB_CLIENT: concourse_to_credhub
+      CREDHUB_CLIENT: credhub_admin_client
       CREDHUB_SECRET: ((concourse_to_credhub_secret))
       CREDHUB_SERVER: ((credhub_server))
       CREDHUB_CA_CERT: ((credhub_ca_cert.certificate))
@@ -113,7 +113,7 @@ jobs:
     file: configuration/proposed-tasks/generate-cert.yml
     params:
       ENV_FILE: interpolated-files/environments/((iaas))/((foundation))/config-common/secrets/env.yml
-      CREDHUB_CLIENT: concourse_to_credhub
+      CREDHUB_CLIENT: credhub_admin_client
       CREDHUB_SECRET: ((concourse_to_credhub_secret))
       CREDHUB_SERVER: ((credhub_server))
       CREDHUB_CA_CERT: ((credhub_ca_cert.certificate))
