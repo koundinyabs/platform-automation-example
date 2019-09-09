@@ -17,8 +17,6 @@ resources:
   source:
     uri: git@github.com:doddatpivotal/platform-automation-example.git
     private_key: ((platform_automation_example_git_repo.private_key))
-    paths:
-    - "environments/((iaas))/((foundation))/config-common"
 
 jobs:
 
@@ -43,7 +41,7 @@ jobs:
     params: &credhub_interpolate_params
       CREDHUB_SERVER: ((credhub_server))
       CREDHUB_CA_CERT: ((credhub_ca_cert.certificate))
-      CREDHUB_CLIENT: concourse_to_credhub
+      CREDHUB_CLIENT: credhub_admin_client
       CREDHUB_SECRET: ((concourse_to_credhub_secret))
       PREFIX: '/((foundation))-foundation'
       INTERPOLATION_PATHS: "environments/((iaas))/((foundation))/config-common/secrets"
