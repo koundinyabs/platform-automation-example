@@ -51,7 +51,7 @@ properties-configuration:
     default_security_group: ((bosh_deployed_vms_security_group_name))
     ssh_public_key: ((opsman_ssh_public_key))
     ops_manager_ssh_private_key: ((opsman_ssh_private_key))
-    bosh_storage_account_name: ((ops_manager_storage_account))
+    bosh_storage_account_name: ((bosh_root_storage_account))
   director_configuration:
     blobstore_type: local
     bosh_recreate_on_next_deploy: false
