@@ -1,6 +1,6 @@
 opsman_vm_name: "pivotal-ops-manager"
 ops_manager_private_ip: "10.0.8.4"
-ops_manager_public_ip: "23.96.25.101"
+ops_manager_public_ip: "138.91.114.172"
 opsman_host: "opsman.east.s1p.koundinya.cc"
 azure_subscription_id: "07feece3-65c6-4c2a-bae0-5ca575a8129a"
 azure_tenant_id: "29248f74-371f-4db2-9a50-c62a6877a0c1"
