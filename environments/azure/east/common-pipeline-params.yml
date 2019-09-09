@@ -1,7 +1,7 @@
 s3_region_name: us-east-1
 s3_buckets_product: moda-platform-automation-product
 s3_buckets_installation: moda-platform-automation-installation
-credhub_server: https://credhub.haas-228.pez.pivotal.io:8844
+credhub_server: https://credhub.vimana.s1p.koundinya.cc
 foundation: east
 iaas: azure
 core_domain: "east.s1p.koundinya.cc"
