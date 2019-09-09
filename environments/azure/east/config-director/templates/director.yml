@@ -42,6 +42,15 @@ networks-configuration:
       - zone-2
       - zone-3
 properties-configuration:
+  iaas_configuration:
+    vcenter_host: ((vcenter_hostname))
+    azure_subscription_id: ((azure_subscription_id))
+    azure_tenant_id: ((azure_tenant_id))
+    azure_client_id: ((azure_client_id))
+    azure_resource_group: ((azure_resource_group))
+    bosh_deployed_vms_security_group_name: ((bosh_deployed_vms_security_group_name))
+    ops_manager_ssh_public_key: ((opsman_ssh.public_key))
+    ops_manager_ssh_private_key: ((opsman_ssh.private_key))
   director_configuration:
     blobstore_type: local
     bosh_recreate_on_next_deploy: false
