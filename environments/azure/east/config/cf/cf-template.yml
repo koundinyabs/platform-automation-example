@@ -56,8 +56,8 @@ product-properties:
     value: ((cloud_controller/staging_timeout_in_seconds))
   .cloud_controller.system_domain:
     value: ((cloud_controller/system_domain))
-  .control.static_ips:
-    value: ((control/static_ips))
+  # .control.static_ips:
+  #   value: ((control/static_ips))
   .diego_brain.starting_container_count_maximum:
     value: ((diego_brain/starting_container_count_maximum))
   .ha_proxy.skip_cert_verify:
@@ -76,6 +76,8 @@ product-properties:
     value: ((mysql_monitor/recipient_email))
   .mysql_monitor.write_read_delay:
     value: ((mysql_monitor/write_read_delay))
+  .mysql_proxy.enable_inactive_mysql_port:
+    value: ((mysql_proxy/enable_inactive_mysql_port))
   .mysql_proxy.shutdown_delay:
     value: ((mysql_proxy/shutdown_delay))
   .mysql_proxy.startup_delay:
@@ -275,30 +277,29 @@ product-properties:
   .properties.tcp_routing:
     value: disable
   .properties.uaa:
-    selected_option: ldap
-    value: ldap
-  .properties.uaa.ldap.credentials:
-    value:
-      identity: ((uaa/ldap/credentials_identity))
-      password: ((uaa/ldap/credentials_password))
-  .properties.uaa.ldap.first_name_attribute:
-    value: ((uaa/ldap/first_name_attribute))
-  .properties.uaa.ldap.group_search_base:
-    value: ((uaa/ldap/group_search_base))
-  .properties.uaa.ldap.group_search_filter:
-    value: ((uaa/ldap/group_search_filter))
-  .properties.uaa.ldap.last_name_attribute:
-    value: ((uaa/ldap/last_name_attribute))
-  .properties.uaa.ldap.ldap_referrals:
-    value: ((uaa/ldap/ldap_referrals))
-  .properties.uaa.ldap.mail_attribute_name:
-    value: ((uaa/ldap/mail_attribute_name))
-  .properties.uaa.ldap.search_base:
-    value: ((uaa/ldap/search_base))
-  .properties.uaa.ldap.search_filter:
-    value: ((uaa/ldap/search_filter))
-  .properties.uaa.ldap.url:
-    value: ((uaa/ldap/url))
+    value: internal
+  # .properties.uaa.ldap.credentials:
+  #   value:
+  #     identity: ((uaa/ldap/credentials_identity))
+  #     password: ((uaa/ldap/credentials_password))
+  # .properties.uaa.ldap.first_name_attribute:
+  #   value: ((uaa/ldap/first_name_attribute))
+  # .properties.uaa.ldap.group_search_base:
+  #   value: ((uaa/ldap/group_search_base))
+  # .properties.uaa.ldap.group_search_filter:
+  #   value: ((uaa/ldap/group_search_filter))
+  # .properties.uaa.ldap.last_name_attribute:
+  #   value: ((uaa/ldap/last_name_attribute))
+  # .properties.uaa.ldap.ldap_referrals:
+  #   value: ((uaa/ldap/ldap_referrals))
+  # .properties.uaa.ldap.mail_attribute_name:
+  #   value: ((uaa/ldap/mail_attribute_name))
+  # .properties.uaa.ldap.search_base:
+  #   value: ((uaa/ldap/search_base))
+  # .properties.uaa.ldap.search_filter:
+  #   value: ((uaa/ldap/search_filter))
+  # .properties.uaa.ldap.url:
+  #   value: ((uaa/ldap/url))
   .properties.uaa_database:
     value: internal_mysql
   .properties.uaa_session_cookie_max_age:
