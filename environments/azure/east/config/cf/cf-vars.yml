@@ -19,6 +19,8 @@ networking_poe_ssl_certs_0/name: pas-cert
 #uaa/ldap/ldap_referrals:
 
 network_name: pas
+az2_name: zone-2
+az3_name: zone-3
 
 security_acknowledgement: X
 singleton_availability_zone: zone-1
