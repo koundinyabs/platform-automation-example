@@ -23,7 +23,7 @@ network-properties:
   network:
     name: ((network_name))
   other_availability_zones:
-  - name: ((singleton_availability_zone))
+  - name: ((other_availability_zones))
   singleton_availability_zone:
     name: ((singleton_availability_zone))
 product-name: cf
@@ -389,6 +389,7 @@ resource-config:
     instance_type:
       id: ((router_instance_type))
     instances: ((router_instances))
+    elb_names: ((router_elb_names))
   tcp_router:
     instance_type:
       id: ((tcp_router_instance_type))

@@ -22,6 +22,7 @@ network_name: pas
 
 security_acknowledgement: X
 singleton_availability_zone: zone-1
+other_availability_zones: "zone-1,zone-2,zone-3"
 ha_proxy/skip_cert_verify: true
 
 nfsbrokerpush_post_deploy_state: on
@@ -35,3 +36,5 @@ tcp_router_instances: 0
 backup_restore_instances: 0
 
 secure_service_instance_credentials: true
+
+router_elb_names: "east-web-lb"
