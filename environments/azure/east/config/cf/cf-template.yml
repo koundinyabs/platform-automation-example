@@ -23,7 +23,9 @@ network-properties:
   network:
     name: ((network_name))
   other_availability_zones:
-  - name: ((other_availability_zones))
+  - name: ((singleton_availability_zone))
+  - name: ((az2_name))
+  - name: ((az3_name))
   singleton_availability_zone:
     name: ((singleton_availability_zone))
 product-name: cf
@@ -56,8 +58,6 @@ product-properties:
     value: ((cloud_controller/staging_timeout_in_seconds))
   .cloud_controller.system_domain:
     value: ((cloud_controller/system_domain))
-  # .control.static_ips:
-  #   value: ((control/static_ips))
   .diego_brain.starting_container_count_maximum:
     value: ((diego_brain/starting_container_count_maximum))
   .ha_proxy.skip_cert_verify:
@@ -278,28 +278,20 @@ product-properties:
     value: disable
   .properties.uaa:
     value: internal
-  # .properties.uaa.ldap.credentials:
-  #   value:
-  #     identity: ((uaa/ldap/credentials_identity))
-  #     password: ((uaa/ldap/credentials_password))
-  # .properties.uaa.ldap.first_name_attribute:
-  #   value: ((uaa/ldap/first_name_attribute))
-  # .properties.uaa.ldap.group_search_base:
-  #   value: ((uaa/ldap/group_search_base))
-  # .properties.uaa.ldap.group_search_filter:
-  #   value: ((uaa/ldap/group_search_filter))
-  # .properties.uaa.ldap.last_name_attribute:
-  #   value: ((uaa/ldap/last_name_attribute))
-  # .properties.uaa.ldap.ldap_referrals:
-  #   value: ((uaa/ldap/ldap_referrals))
-  # .properties.uaa.ldap.mail_attribute_name:
-  #   value: ((uaa/ldap/mail_attribute_name))
-  # .properties.uaa.ldap.search_base:
-  #   value: ((uaa/ldap/search_base))
-  # .properties.uaa.ldap.search_filter:
-  #   value: ((uaa/ldap/search_filter))
-  # .properties.uaa.ldap.url:
-  #   value: ((uaa/ldap/url))
+  .properties.uaa.internal.password_expires_after_months:
+    value: ((uaa/internal/password_expires_after_months))
+  .properties.uaa.internal.password_max_retry:
+    value: ((uaa/internal/password_max_retry))
+  .properties.uaa.internal.password_min_length:
+    value: ((uaa/internal/password_min_length))
+  .properties.uaa.internal.password_min_lowercase:
+    value: ((uaa/internal/password_min_lowercase))
+  .properties.uaa.internal.password_min_numeric:
+    value: ((uaa/internal/password_min_numeric))
+  .properties.uaa.internal.password_min_special:
+    value: ((uaa/internal/password_min_special))
+  .properties.uaa.internal.password_min_uppercase:
+    value: ((uaa/internal/password_min_uppercase))
   .properties.uaa_database:
     value: internal_mysql
   .properties.uaa_session_cookie_max_age:
@@ -386,10 +378,10 @@ resource-config:
       id: ((route_syncer_instance_type))
     instances: ((route_syncer_instances))
   router:
+    elb_names: ((router_elb_names))
     instance_type:
       id: ((router_instance_type))
     instances: ((router_instances))
-    elb_names: ((router_elb_names))
   tcp_router:
     instance_type:
       id: ((tcp_router_instance_type))
