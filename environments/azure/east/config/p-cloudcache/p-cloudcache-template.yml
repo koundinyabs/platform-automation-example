@@ -29,12 +29,6 @@ product-properties:
   .properties.dev_plan_enable_service_plan:
     selected_option: disable
     value: disable
-  .properties.dev_plan_enable_service_plan.enable.persistent_disk_type:
-    value: ((dev_plan_enable_service_plan/enable/persistent_disk_type))
-  .properties.dev_plan_enable_service_plan.enable.service_metrics:
-    value: ((dev_plan_enable_service_plan/enable/service_metrics))
-  .properties.dev_plan_enable_service_plan.enable.vm_type:
-    value: ((dev_plan_enable_service_plan/enable/vm_type))
   .properties.enable_secure_binding:
     value: ((enable_secure_binding))
   .properties.number_simultaneous_upgrades:
@@ -47,26 +41,16 @@ product-properties:
     value: ((plan1_enable_service_plan/enable/cf_service_access))
   .properties.plan1_enable_service_plan.enable.default_num_servers:
     value: ((plan1_enable_service_plan/enable/default_num_servers))
-  .properties.plan1_enable_service_plan.enable.locator_persistent_disk_type:
-    value: ((plan1_enable_service_plan/enable/locator_persistent_disk_type))
-  .properties.plan1_enable_service_plan.enable.locator_vm_type:
-    value: ((plan1_enable_service_plan/enable/locator_vm_type))
   .properties.plan1_enable_service_plan.enable.max_servers_per_cluster:
     value: ((plan1_enable_service_plan/enable/max_servers_per_cluster))
   .properties.plan1_enable_service_plan.enable.plan_description:
     value: ((plan1_enable_service_plan/enable/plan_description))
   .properties.plan1_enable_service_plan.enable.plan_name:
     value: ((plan1_enable_service_plan/enable/plan_name))
-  .properties.plan1_enable_service_plan.enable.server_persistent_disk_type:
-    value: ((plan1_enable_service_plan/enable/server_persistent_disk_type))
-  .properties.plan1_enable_service_plan.enable.server_vm_type:
-    value: ((plan1_enable_service_plan/enable/server_vm_type))
   .properties.plan1_enable_service_plan.enable.service_instance_azs:
     value: ((plan1_enable_service_plan/enable/service_instance_azs))
   .properties.plan1_enable_service_plan.enable.service_instance_quota:
     value: ((plan1_enable_service_plan/enable/service_instance_quota))
-  .properties.plan1_enable_service_plan.enable.service_metrics:
-    value: ((plan1_enable_service_plan/enable/service_metrics))
   .properties.plan2_enable_service_plan:
     value: enable
   .properties.plan2_enable_service_plan.enable.cf_service_access:
@@ -137,8 +121,6 @@ product-properties:
     value: ((small_footprint_enable_service_plan/enable/cf_service_access))
   .properties.small_footprint_enable_service_plan.enable.max_servers_per_cluster:
     value: ((small_footprint_enable_service_plan/enable/max_servers_per_cluster))
-  .properties.small_footprint_enable_service_plan.enable.persistent_disk_type:
-    value: ((small_footprint_enable_service_plan/enable/persistent_disk_type))
   .properties.small_footprint_enable_service_plan.enable.plan_description:
     value: ((small_footprint_enable_service_plan/enable/plan_description))
   .properties.small_footprint_enable_service_plan.enable.plan_name:
@@ -147,10 +129,6 @@ product-properties:
     value: ((small_footprint_enable_service_plan/enable/service_instance_azs))
   .properties.small_footprint_enable_service_plan.enable.service_instance_quota:
     value: ((small_footprint_enable_service_plan/enable/service_instance_quota))
-  .properties.small_footprint_enable_service_plan.enable.service_metrics:
-    value: ((small_footprint_enable_service_plan/enable/service_metrics))
-  .properties.small_footprint_enable_service_plan.enable.vm_type:
-    value: ((small_footprint_enable_service_plan/enable/vm_type))
   .properties.syslog:
     value: disable
   .properties.tls_supported:

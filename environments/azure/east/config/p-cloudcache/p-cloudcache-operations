@@ -1,13 +1,2 @@
 features/dev_plan_enable_service_plan-disable.yml
 network/3-az-configuration.yml
-optional/add-dev_plan_enable_service_plan-enable-persistent_disk_type.yml
-optional/add-dev_plan_enable_service_plan-enable-service_metrics.yml
-optional/add-dev_plan_enable_service_plan-enable-vm_type.yml
-optional/add-plan1_enable_service_plan-enable-locator_persistent_disk_type.yml
-optional/add-plan1_enable_service_plan-enable-locator_vm_type.yml
-optional/add-plan1_enable_service_plan-enable-server_persistent_disk_type.yml
-optional/add-plan1_enable_service_plan-enable-server_vm_type.yml
-optional/add-plan1_enable_service_plan-enable-service_metrics.yml
-optional/add-small_footprint_enable_service_plan-enable-persistent_disk_type.yml
-optional/add-small_footprint_enable_service_plan-enable-service_metrics.yml
-optional/add-small_footprint_enable_service_plan-enable-vm_type.yml
