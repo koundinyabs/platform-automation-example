@@ -27,8 +27,17 @@ product-properties:
   .properties.default_distributed_system_id:
     value: ((default_distributed_system_id))
   .properties.dev_plan_enable_service_plan:
-    selected_option: disable
-    value: disable
+    value: enable
+  .properties.dev_plan_enable_service_plan.enable.cf_service_access:
+    value: ((dev_plan_enable_service_plan/enable/cf_service_access))
+  .properties.dev_plan_enable_service_plan.enable.plan_description:
+    value: ((dev_plan_enable_service_plan/enable/plan_description))
+  .properties.dev_plan_enable_service_plan.enable.plan_name:
+    value: ((dev_plan_enable_service_plan/enable/plan_name))
+  .properties.dev_plan_enable_service_plan.enable.service_instance_azs:
+    value: ((dev_plan_enable_service_plan/enable/service_instance_azs))
+  .properties.dev_plan_enable_service_plan.enable.service_instance_quota:
+    value: ((dev_plan_enable_service_plan/enable/service_instance_quota))
   .properties.enable_secure_binding:
     value: ((enable_secure_binding))
   .properties.number_simultaneous_upgrades:
@@ -68,53 +77,14 @@ product-properties:
   .properties.plan2_enable_service_plan.enable.service_instance_quota:
     value: ((plan2_enable_service_plan/enable/service_instance_quota))
   .properties.plan3_enable_service_plan:
-    value: enable
-  .properties.plan3_enable_service_plan.enable.cf_service_access:
-    value: ((plan3_enable_service_plan/enable/cf_service_access))
-  .properties.plan3_enable_service_plan.enable.default_num_servers:
-    value: ((plan3_enable_service_plan/enable/default_num_servers))
-  .properties.plan3_enable_service_plan.enable.max_servers_per_cluster:
-    value: ((plan3_enable_service_plan/enable/max_servers_per_cluster))
-  .properties.plan3_enable_service_plan.enable.plan_description:
-    value: ((plan3_enable_service_plan/enable/plan_description))
-  .properties.plan3_enable_service_plan.enable.plan_name:
-    value: ((plan3_enable_service_plan/enable/plan_name))
-  .properties.plan3_enable_service_plan.enable.service_instance_azs:
-    value: ((plan3_enable_service_plan/enable/service_instance_azs))
-  .properties.plan3_enable_service_plan.enable.service_instance_quota:
-    value: ((plan3_enable_service_plan/enable/service_instance_quota))
+    selected_option: disable
+    value: disable
   .properties.plan4_enable_service_plan:
-    value: enable
-  .properties.plan4_enable_service_plan.enable.cf_service_access:
-    value: ((plan4_enable_service_plan/enable/cf_service_access))
-  .properties.plan4_enable_service_plan.enable.default_num_servers:
-    value: ((plan4_enable_service_plan/enable/default_num_servers))
-  .properties.plan4_enable_service_plan.enable.max_servers_per_cluster:
-    value: ((plan4_enable_service_plan/enable/max_servers_per_cluster))
-  .properties.plan4_enable_service_plan.enable.plan_description:
-    value: ((plan4_enable_service_plan/enable/plan_description))
-  .properties.plan4_enable_service_plan.enable.plan_name:
-    value: ((plan4_enable_service_plan/enable/plan_name))
-  .properties.plan4_enable_service_plan.enable.service_instance_azs:
-    value: ((plan4_enable_service_plan/enable/service_instance_azs))
-  .properties.plan4_enable_service_plan.enable.service_instance_quota:
-    value: ((plan4_enable_service_plan/enable/service_instance_quota))
+    selected_option: disable
+    value: disable
   .properties.plan5_enable_service_plan:
-    value: enable
-  .properties.plan5_enable_service_plan.enable.cf_service_access:
-    value: ((plan5_enable_service_plan/enable/cf_service_access))
-  .properties.plan5_enable_service_plan.enable.default_num_servers:
-    value: ((plan5_enable_service_plan/enable/default_num_servers))
-  .properties.plan5_enable_service_plan.enable.max_servers_per_cluster:
-    value: ((plan5_enable_service_plan/enable/max_servers_per_cluster))
-  .properties.plan5_enable_service_plan.enable.plan_description:
-    value: ((plan5_enable_service_plan/enable/plan_description))
-  .properties.plan5_enable_service_plan.enable.plan_name:
-    value: ((plan5_enable_service_plan/enable/plan_name))
-  .properties.plan5_enable_service_plan.enable.service_instance_azs:
-    value: ((plan5_enable_service_plan/enable/service_instance_azs))
-  .properties.plan5_enable_service_plan.enable.service_instance_quota:
-    value: ((plan5_enable_service_plan/enable/service_instance_quota))
+    selected_option: disable
+    value: disable
   .properties.small_footprint_enable_service_plan:
     value: enable
   .properties.small_footprint_enable_service_plan.enable.cf_service_access:
