@@ -3,7 +3,6 @@ features/telemetry_selector-disabled.yml
 network/3-az-configuration.yml
 features/oidc_selector-disabled.yml
 resource/pivotal-container-service_elb_names.yml
-resource/pivotal-container-service_additional_vm_extensions.yml
 optional/add-plan1_selector-active-master_vm_type.yml
 optional/add-plan1_selector-active-master_persistent_disk_type.yml
 optional/add-plan1_selector-active-worker_vm_type.yml
