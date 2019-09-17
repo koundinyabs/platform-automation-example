@@ -3,14 +3,14 @@ network_name: control-plane
 service_network_name: control-plane
 singleton_availability_zone: us-east-1a
 
-cloud_provider/aws/iam_instance_profile_master: platform-system_pks_master
-cloud_provider/aws/iam_instance_profile_worker: platform_system_pks_worker
+cloud_provider/aws/iam_instance_profile_master: vimana-om-role
+cloud_provider/aws/iam_instance_profile_worker: vimana-om-role
 
 az2_name: us-east-1b
 az3_name: us-east-1c
 
 pivotal-container-service_elb_names: [alb:platform-system-pks-tg-8443,alb:platform-system-pks-tg-9021]
-#pivotal-container-service_additional_vm_extensions: [pks_api_lb_security_group]
+pivotal-container-service_additional_vm_extensions: [pks_api_lb_security_group]
 
 plan1_selector/active/name: "small"
 plan1_selector/active/description: "1 master, 3 workers with privileged containers"

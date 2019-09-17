@@ -17,3 +17,4 @@ optional/add-plan2_selector-active-worker_persistent_disk_type.yml
 optional/add-plan2_selector-active-errand_vm_type.yml
 optional/add-plan2_selector-active-allow_privileged_containers.yml
 features/plan2_selector-active.yml
+resource/pivotal-container-service_additional_vm_extensions.yml
