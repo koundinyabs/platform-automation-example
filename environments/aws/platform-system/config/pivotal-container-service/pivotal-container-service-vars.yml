@@ -10,7 +10,7 @@ az2_name: us-east-1b
 az3_name: us-east-1c
 
 pivotal-container-service_elb_names: [alb:platform-system-pks-tg-8443,alb:platform-system-pks-tg-9021]
-pivotal-container-service_additional_vm_extensions: [platform-system-pks-api-lb-security-group]
+pivotal-container-service_additional_vm_extensions: [pks_api_lb_security_group]
 
 plan1_selector/active/name: "small"
 plan1_selector/active/description: "1 master, 3 workers with privileged containers"
