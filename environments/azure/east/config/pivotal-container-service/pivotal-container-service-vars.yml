@@ -16,6 +16,8 @@ cloud_provider/azure/azure_worker_managed_identity: pks-worker
 
 service_network_name: services
 singleton_availability_zone: zone-1
+az2_name: zone-2
+az3_name: zone-3
 
 plan1_selector/active/name: "small-priv"
 plan1_selector/active/description: "1 master, 1 worker allowing privileged containers"
@@ -30,5 +32,6 @@ plan2_selector/active/worker_az_placement: [zone-1, zone-2, zone-3]
 plan2_selector/active/allow_privileged_containers: true
 plan2_selector/active/master_instances: 3
 plan2_selector/active/worker_instances: 3
+plan2_selector/active/max_worker_instances: 20
 
 pivotal-container-service_elb_names: [east-pks-lb]
