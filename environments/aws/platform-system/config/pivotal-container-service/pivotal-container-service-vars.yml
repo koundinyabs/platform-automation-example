@@ -1,0 +1,40 @@
+pks_api_hostname: pksapi.vimana.s1p.koundinya.cc
+network_name: control-plane
+service_network_name: control-plane
+singleton_availability_zone: us-east-1a
+
+cloud_provider/aws/iam_instance_profile_master: platform-system_pks_master
+cloud_provider/aws/iam_instance_profile_worker: platform_system_pks_worker
+
+az2_name: us-east-1b
+az3_name: us-east-1c
+
+pivotal-container-service_elb_names: [alb:platform-system-pks-tg-8443,alb:platform-system-pks-tg-9021]
+pivotal-container-service_additional_vm_extensions: [platform-system-pks-api-lb-security-group]
+
+plan1_selector/active/name: "small"
+plan1_selector/active/description: "1 master, 3 workers with privileged containers"
+plan1_selector/active/master_az_placement: [us-east-1a]
+plan1_selector/active/worker_az_placement: [us-east-1a,us-east-1b,us-east-1c]
+plan1_selector/active/errand_vm_type: t2.micro
+plan1_selector/active/master_persistent_disk_type: "20480"
+plan1_selector/active/master_vm_type: m4.large
+plan1_selector/active/worker_persistent_disk_type: "102400"
+plan1_selector/active/worker_vm_type: m4.large
+plan1_selector/active/allow_privileged_containers: true
+plan1_selector/active/worker_instances: 3
+
+plan2_selector/active/name: "medium"
+plan2_selector/active/description: "3 masters, 3 workers with privileged containers"
+plan2_selector/active/master_az_placement: [us-east-1a,us-east-1b,us-east-1c]
+plan2_selector/active/worker_az_placement: [us-east-1a,us-east-1b,us-east-1c]
+plan2_selector/active/errand_vm_type: t2.micro
+plan2_selector/active/master_persistent_disk_type: "20480"
+plan2_selector/active/master_vm_type: m4.large
+plan2_selector/active/worker_persistent_disk_type: "102400"
+plan2_selector/active/worker_vm_type: m4.large
+plan2_selector/active/allow_privileged_containers: true
+plan2_selector/active/disable_deny_escalating_exec: true
+plan2_selector/active/master_instances: 3
+plan2_selector/active/max_worker_instances: 50
+plan2_selector/active/worker_instances: 3
