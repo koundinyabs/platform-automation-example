@@ -5,7 +5,7 @@ cloud_provider/azure/subscription_id: "07feece3-65c6-4c2a-bae0-5ca575a8129a"
 cloud_provider/azure/tenant_id: "29248f74-371f-4db2-9a50-c62a6877a0c1"
 cloud_provider/azure/location: eastus
 cloud_provider/azure/resource_group_name: east
-cloud_provider/azure/azure_cloud_name: azure
+cloud_provider/azure/azure_cloud_name: AzurePublicCloud
 cloud_provider/azure/vnet_resource_group_name: east
 cloud_provider/azure/vnet_name: east-virtual-network
 cloud_provider/azure/default_security_group: east-pks-api-sg
