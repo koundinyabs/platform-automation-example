@@ -52,7 +52,8 @@ product-properties:
   .properties.node_exporter_deploy:
     value: ((node_exporter_deploy))
   .properties.oidc_selector:
-    value: "false"
+    selected_option: disabled
+    value: disabled
   .properties.pks-vrli:
     value: disabled
   .properties.pks-vrops:
