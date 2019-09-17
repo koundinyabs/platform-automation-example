@@ -32,6 +32,8 @@ resources:
     private_key: ((platform_automation_example_git_repo.private_key))
     paths:
     - "environments/((iaas))/((foundation))/config/((product))"
+    - "environments/((iaas))/((foundation))/config-common"
+    - "environments/((iaas))/((foundation))/common-pipeline-params.yml"
     - "proposed-tasks"
 
 - name: lock
