@@ -2,5 +2,6 @@ network_name: control-plane
 singleton_availability_zone: us-east-1b
 az2_name: us-east-1c
 az3_name: us-east-1a
-ui/ui_root_url: https://rv.vimana.s1p.koundinya.cc
-ui_elb_names: [alb:reliability-view-ui-tg]
+ui/ui_root_url: https://rv.vimana.s1p.koundinya.cc:3000
+ui_elb_names: [alb:rv-nlb-tg
+]
