@@ -3,4 +3,4 @@ singleton_availability_zone: us-east-1a
 az2_name: us-east-1b
 az3_name: us-east-1c
 ui/ui_root_url: rv.vimana.s1p.koundinya.cc
-ui_elb_names: reliability-view-grafana-lb
+ui_elb_names: [reliability-view-grafana-lb]
