@@ -1,0 +1,50 @@
+errand-config:
+  smoke-test:
+    post-deploy-state: ((smoke-test_post_deploy_state))
+  update-admin-password:
+    post-deploy-state: ((update-admin-password_post_deploy_state))
+network-properties:
+  network:
+    name: ((network_name))
+  other_availability_zones:
+  - name: ((singleton_availability_zone))
+  - name: ((az2_name))
+  - name: ((az3_name))
+  singleton_availability_zone:
+    name: ((singleton_availability_zone))
+product-name: p-reliability-view
+product-properties:
+  .properties.smtp:
+    value: disabled
+  .properties.ui_authentication:
+    value: basic
+  .tsdb.blackbox_exporter_port:
+    value: ((tsdb/blackbox_exporter_port))
+  .tsdb.scrape_interval:
+    value: ((tsdb/scrape_interval))
+  .ui.enable_login_form:
+    value: ((ui/enable_login_form))
+resource-config:
+  pxc:
+    instance_type:
+      id: ((pxc_instance_type))
+    instances: ((pxc_instances))
+    persistent_disk:
+      size_mb: ((pxc_persistent_disk_size))
+  pxc-proxy:
+    instance_type:
+      id: ((pxc-proxy_instance_type))
+    instances: ((pxc-proxy_instances))
+    persistent_disk:
+      size_mb: ((pxc-proxy_persistent_disk_size))
+  tsdb:
+    instance_type:
+      id: ((tsdb_instance_type))
+    persistent_disk:
+      size_mb: ((tsdb_persistent_disk_size))
+  ui:
+    instance_type:
+      id: ((ui_instance_type))
+    instances: ((ui_instances))
+    persistent_disk:
+      size_mb: ((ui_persistent_disk_size))
