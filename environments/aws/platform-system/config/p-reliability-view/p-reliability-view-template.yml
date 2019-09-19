@@ -22,6 +22,12 @@ product-properties:
       tls_certificates:
         cert_pem: ((scrape_configs_0/certificate))
         private_key_pem: ((scrape_configs_0/privatekey))
+    - ca: ((scrape_configs_1/ca))
+      scrape_job: ((scrape_configs_1/scrape_job))
+      server_name: ((scrape_configs_1/server_name))
+      tls_certificates:
+        cert_pem: ((scrape_configs_1/certificate))
+        private_key_pem: ((scrape_configs_1/privatekey))
   .properties.smtp:
     value: disabled
   .properties.ui_authentication:
