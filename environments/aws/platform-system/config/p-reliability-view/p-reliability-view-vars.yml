@@ -16,3 +16,14 @@ scrape_configs_0/scrape_job: |
               - "40.76.96.228:9090"
               - "40.76.96.35:9090"
 scrape_configs_0/server_name: pasexporter
+
+scrape_configs_1/scrape_job: |
+          job_name: west-foundation
+          metrics_path: /metrics
+          scheme: https
+          static_configs:
+            - targets:
+              - "52.148.152.168:9090"
+              - "52.148.152.149:9090"
+              - "52.148.152.159:9090"
+scrape_configs_0/server_name: pasexporter
