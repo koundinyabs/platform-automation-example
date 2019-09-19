@@ -26,4 +26,4 @@ scrape_configs_1/scrape_job: |
               - "52.148.152.168:9090"
               - "52.148.152.149:9090"
               - "52.148.152.159:9090"
-scrape_configs_0/server_name: pasexporter
+scrape_configs_1/server_name: pasexporter
