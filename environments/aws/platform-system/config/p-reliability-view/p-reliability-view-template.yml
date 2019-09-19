@@ -32,6 +32,8 @@ product-properties:
     value: ((tsdb/scrape_interval))
   .ui.enable_login_form:
     value: ((ui/enable_login_form))
+  .ui.ssl_ca_certificate:
+    value: ((ui/ssl_ca_certificate))
   .ui.ssl_certificates:
     value:
       cert_pem: ((ui/ssl_certificates/certificate))
