@@ -4,3 +4,15 @@ az2_name: us-east-1c
 az3_name: us-east-1a
 ui/ui_root_url: https://rv.vimana.s1p.koundinya.cc:3000
 ui_elb_names: [alb:rv-nlb-tg]
+ui_additional_vm_extensions: [reliability-view-ui-sg-cloud-properties]
+
+scrape_configs_0/scrape_job: |
+          job_name: east-foundation
+          metrics_path: /metrics
+          scheme: https
+          static_configs:
+            - targets:
+              - "40.76.96.201:9090"
+              - "40.76.96.228:9090"
+              - "40.76.96.35:9090"
+scrape_configs_0/server_name: pasexporter
