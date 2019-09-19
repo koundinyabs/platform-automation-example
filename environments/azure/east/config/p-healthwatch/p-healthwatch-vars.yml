@@ -3,3 +3,4 @@ singleton_availability_zone: zone-1
 az2_name: zone-2
 az3_name: zone-3
 service_network_name: services
+healthwatch-forwarder/foundation_name: east
