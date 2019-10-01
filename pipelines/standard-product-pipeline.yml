@@ -57,6 +57,7 @@ resources:
 jobs:
 
 - name: force-unlock
+  public: true
   serial: true
   plan:
   - get: lock
@@ -66,6 +67,7 @@ jobs:
 
 - name: lock-tiles
   serial: true
+  public: true
   plan:
   - aggregate:
     - put: lock
@@ -73,6 +75,7 @@ jobs:
     - get: configuration
 
 - name: validate-tile-configuration
+  public: true
   plan:
   - aggregate:
     - get: configuration
@@ -104,6 +107,7 @@ jobs:
 
 - name: download-stage-tile-stemcell
   serial: true
+  public: true
   plan:
   - aggregate:
     - get: configuration
@@ -146,6 +150,7 @@ jobs:
 
 - name: configure-and-apply
   serial: true
+  public: true
   plan:
   - aggregate:
     - get: configuration
@@ -199,6 +204,7 @@ jobs:
       ENV_FILE: environments/((iaas))/((foundation))/config-common/secrets/env.yml
 
 - name: unlock-tile
+  public: true
   serial: true
   plan:
   - get: configuration
@@ -210,6 +216,7 @@ jobs:
       release: lock
 
 - name: export-staged-config
+  public: true
   plan:
   - aggregate:
     - get: platform-automation-image
