@@ -39,3 +39,4 @@ backup_restore_instances: 0
 secure_service_instance_credentials: true
 
 router_elb_names: ["east-web-lb"]
+compute_instances: 2
