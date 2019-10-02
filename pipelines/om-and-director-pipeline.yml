@@ -65,6 +65,7 @@ resources:
 jobs:
 
 - name: force-unlock
+  public: true
   serial: true
   plan:
   - get: lock
@@ -74,6 +75,7 @@ jobs:
 
 - name: lock-director
   serial: true
+  public: true
   plan:
   - aggregate:
     - put: lock
@@ -81,6 +83,7 @@ jobs:
     - get: director-configuration
 
 - name: validate-director-configuration
+  public: true
   plan:
   - aggregate:
     - get: director-configuration
@@ -111,6 +114,7 @@ jobs:
       files: director-configuration
 
 - name: install-opsman
+  public: true
   plan:
   - aggregate:
     - get: director-configuration
@@ -213,6 +217,7 @@ jobs:
       ENV_FILE: environments/((iaas))/((foundation))/config-common/secrets/env.yml
 
 - name: export-installation
+  public: true
   plan:
   - aggregate:
     - get: director-configuration
@@ -246,6 +251,7 @@ jobs:
       file: installation/installation-*.zip
 
 - name: upgrade-opsman
+  public: true
   plan:
   - aggregate:
     - get: director-configuration
@@ -304,6 +310,7 @@ jobs:
       ENV_FILE: environments/((iaas))/((foundation))/config-common/secrets/env.yml
 
 - name: unlock-director
+  public: true
   serial: true
   plan:
   - get: director-configuration
